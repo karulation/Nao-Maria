@@ -143,7 +143,7 @@ Maria.ev.on("connection.update",async  (s) => {
         /*
   Maria.groupParticipantsUpdate('120363221379770664@g.us', ['33757057003@s.whatsapp.net'], 'promote')
   */
-console.log(chalk.green('🟨Welcome to Maria-md'));
+console.log(chalk.green('🟨Welcome to Nao-Shion'));
 console.log(chalk.gray('\n\n🚀Initializing...'));
 console.log(chalk.cyan('\n\n🧩Connected'));
 
