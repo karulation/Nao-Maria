@@ -294,8 +294,8 @@ MariaLft = await getBuffer(ppuser)
                 if (anu.action == 'add') {
                 const Mariabuffer = await getBuffer(ppuser)
                 let MariaName = num
-                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                const xtime = moment.tz('Asia/Kuala_Lumpur').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Kuala_Lumpur').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
 Mariabody = `┌──⊰ 🎗𝑾𝑬𝑳𝑪𝑶𝑴𝑬🎗⊰
 │⊳  🌐 To: ${metadata.subject}
@@ -317,8 +317,8 @@ Maria.sendMessage(anu.id,
 "sourceUrl": `${link}`}}})
                 } else if (anu.action == 'remove') {
                 	const Mariabuffer = await getBuffer(ppuser)
-                    const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	                const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                    const Mariatime = moment.tz('Asia/Kuala_Lumpur').format('HH:mm:ss')
+	                const Mariadate = moment.tz('Asia/Kuala_Lumpur').format('DD/MM/YYYY')
                 	let MariaName = num
                     const Mariamembers = metadata.participants.length  
      Mariabody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
