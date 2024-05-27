@@ -1506,10 +1506,6 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 ❁ ══════ ❃•📄 *NOTE* 📄•❃ ══════ ❁
 \`\`\`This bot is a free open source project by Karu Shion\`\`\`
 
-❁ ═════ ❃•📑 *GITHUB* 📑•❃ ═════ ❁
-*_LINK:- https://github.com/Karu-PANDEY023/Nao Shion_*
-
-
 ❁ ═══ ❃•✍🏻 *CONTRIBUTE* ✍🏻•❃ ═══ ❁
 \`\`\`Feel free to open issues regarding any problems or if you have any feature feel free to contact owner by typing ${prefix}owner or ${prefix}mods`
 
@@ -1958,9 +1954,9 @@ break;
 │⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
 │⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
 │⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Maria-support
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: neoanicom.com?joinUs.php
 ╰────────────┈平和
- 🎀𝐅𝐨𝐥𝐥𝐨𝐰 𝐨𝐧: https://www.instagram.com/Karupandeyy_023
+ 🎀𝐅𝐨𝐥𝐥𝐨𝐰 𝐨𝐧: https://www.instagram.com/karulation
 
 Here's the list of my Commands.🔖
 ${readmore}
@@ -2388,7 +2384,7 @@ case 'welcome':
 
 
 case 'git': case 'gitclone':
-if (!text) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/Karu-PANDEY023/Nao Shion `)
+if (!text) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/karulation/naoshion `)
 if (!isUrl(text) && !text.includes('github.com')) return reply(`Link invalid!!`)
     let repo = text.split('/');
     let url = `https://api.github.com/repos/${repo[3]}/${repo[4]}/zipball`
@@ -2895,7 +2891,7 @@ break;
   
 case 'google': {
 Maria.sendMessage(from, { react: { text: "🔎", key: m.key }}) 
-if (!q) return reply(`Example : ${prefix + command} Karu� 𝘱𝘢𝘯𝘥𝘦𝘺`)
+if (!q) return reply(`Example : ${prefix + command} Neo Anime Community`)
 let google = require('google-it')
 google({'query': text}).then(res => {
 let teks = `「🏮 *Google Search Engine*🏮」 \n\n
