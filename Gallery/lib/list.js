@@ -28,9 +28,6 @@ const listmenu=`
 🍁 *Weeb Commands* 🍁
 𝗨𝘀𝗲 : Help7
 
-🍁 *Nsfw Commands* 🍁
-𝗨𝘀𝗲 : Help8
-
 🍁 *SnapBlend Commands* 🍁
 
 𝗨𝘀𝗲 : Help9
