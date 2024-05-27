@@ -17,7 +17,7 @@ global.packname = 'Sticker By'
 global.author = process.env.AUTHOR || "Karu Shion",
 //console view/theme
 global.themeemoji = '🧩'
-global.wm = "Ayush botz inc."
+global.wm = "Karu Shion."
 
 //theme link
 global.link = 'https://chat.whatsapp.com/I66bF7yF6Yr0D2Q34EMm3f'
@@ -56,7 +56,7 @@ ownername: global.ownername,
 sessionId: process.env.id,
 AUTO_BLOCK : process.env.PM_BLOCKER,
 STATUS_SAVER : "true",
-ANTI_BOT:"true",
+ANTI_BOT:"false",
 }
 
 
