@@ -2283,7 +2283,7 @@ reply('Success in turning off all autoblock in this group')
             case 'menu':
             case 'help':
             case 'h':
-                const txt = `╭─「 *Konichiwa* 」
+                const txt = `╭─「 *KonNao!* 」
 │⋊ 𝕌𝕤𝕖𝕣: ${pushname} 
 │⋊ 𝔹𝕠𝕥:  ${botname}
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
@@ -2347,6 +2347,7 @@ ${readmore}
 └──────────⊰
 ┌──⊰ _*👮🏻‍♂️GROUP👮🏻‍♂️*_
 │⊳ 🍁 ${prefix}antilink
+│⊳ 🍁 ${prefix}antitoxic
 │⊳ 🍁 ${prefix}closetime
 │⊳ 🍁 ${prefix}opentime
 │⊳ 🍁 ${prefix}kick
