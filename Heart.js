@@ -95,6 +95,9 @@ const {
 global.modnumber = '60177637943'
 //Gallery/database
 let ntilinkall = JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
+let antitoxicall = JSON.parse(fs.readFileSync('./Gallery/database/antitoxicgp.json'));
+
+let toxicWords = JSON.parse(fs.readFileSync('./Gallery/database/toxicWords.json'));
 // let autoblck =JSON.parse(fs.readFileSync('./Gallery/database/autoblock.json'));
 
 let _afk = JSON.parse(fs.readFileSync('./Gallery/database/afk-user.json'))
@@ -188,6 +191,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const isCreator = [botNumber, ...global.ownernumber].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false;
+        const AntiToxicAll = m.isGroup ? antitoxicall.includes(from) : false;
         //   const AutoBlock = m.isGroup ? autoblck.includes(from) : true;
         /////
         const pickRandom = (arr) => {
@@ -474,7 +478,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
 
 
         ///antilink 
-        if (AntiLinkAll)
+        if (AntiLinkAll){
             if (budy.match('http') && budy.match('https')) {
                 if (!isBotAdmins) return
                 // bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nyou are a group admin thats why i wont kick you, but remember from next time`
@@ -498,7 +502,38 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
                 }, {
                     quoted: m
                 })
-            } else {}
+            }
+	}
+
+	if (AntiToxicAll){
+	     if (isToxic(budy)) {
+	        if (!isBotAdmins) return
+                if (isAdmins) return reply(bvl)
+                if (m.key.fromMe) return reply(bvl)
+                if (isCreator) return reply(bvl)
+		if (!m.isGroup) return replay(mess.grouponly)
+                if (!isAdmins && !isCreator) return replay(mess.useradmin)
+                let teks = `⚠️*NAO WARNING*⚠️
+  
+ \n *${m.sender.split('@')[0]} ARE SUSPECTED TO BE TOXIC!*\nCalling out all admin for verification!\n\n`
+                for (let mem of groupAdmins) {
+                    teks += `🤴 @${mem.split('@')[0]}\n`
+                }
+                Maria.sendMessage(m.chat, {
+                    text: teks,
+                    mentions: groupAdmins
+                }, {
+                    quoted: m
+                })
+            }
+	}
+	    
+	function isToxic(text) {
+		const lowerText = text.toLowerCase(); 
+		return toxicWords.some(word => lowerText.includes(word));
+	}
+
+	    
         //total features by xeon sir
         const mariafeature = () => {
             var mytext = fs.readFileSync("./Heart.js").toString()
@@ -507,7 +542,15 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         }
 
         switch (command) {
-
+	    case 'getID': {
+		if (!isCreator) return reply(mess.owner)
+		console.log(chalk.yellowright(`\n\n========================================================================`))
+		console.log(chalk.greenBright(`\n\n Group ID: ${m.chat}`))
+		console.log(chalk.yellowBright(`\n\n========================================================================\n\n`))
+		
+		await reply(`Master, I already send the ID to your terminal console...`)
+	    }
+	    break;
             case 'stealdp': {
                 const user = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
                 if (user === botNumber) return m.reply('_🙅🏻 I can not steal my own profile picture, Darling 🍭_');
@@ -593,6 +636,33 @@ reply('Success in turning off all autoblock in this group')
                     ntilinkall.splice(off, 1)
                     fs.writeFileSync('./Gallery/database/antilinkall.json', JSON.stringify(ntilinkall))
                     reply('Success in turning off all antilink in this group')
+                } else {
+                    await reply(`Please Type The Option\n\nExample: ${prefix + command} on\nExample: ${prefix + command} off\n\non to enable\noff to disable`)
+                }
+            }
+            break;
+
+	    case 'antitoxic': {
+                if (!m.isGroup) return reply(mess.group)
+                if (!isAdmins && !isCreator) return reply(mess.admin)
+                if (!isBotAdmins) return reply(mess.botAdmin)
+                if (args[0] === "on") {
+                    if (AntiLinkAll) return reply('Already activated')
+                    ntilinkall.push(from)
+                    fs.writeFileSync('./Gallery/database/antitoxicgp.json', JSON.stringify(antitoxicall))
+                    reply('Success in turning on all antitoxic in this group')
+                    var groupe = await Maria.groupMetadata(from)
+                    var members = groupe['participants']
+                    var mems = []
+                    members.map(async adm => {
+                        mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+                    })
+                } else if (args[0] === "off") {
+                    if (!AntiLinkAll) return reply('Already deactivated')
+                    let off = ntilinkall.indexOf(from)
+                    ntilinkall.splice(off, 1)
+                    fs.writeFileSync('./Gallery/database/antitoxicgp.json', JSON.stringify(antitoxicall))
+                    reply('Success in turning off all antitoxic in this group')
                 } else {
                     await reply(`Please Type The Option\n\nExample: ${prefix + command} on\nExample: ${prefix + command} off\n\non to enable\noff to disable`)
                 }
