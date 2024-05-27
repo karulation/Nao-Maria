@@ -2,13 +2,13 @@ const prefix = global.prefa
   const pushname = m.pushName || "No Name"
 
 const helpmenu=` 
-「 *Maria BOT* 」
+「 *Nao Shion BOT* 」
 ♡ۣۜۜ፝͜͜͡͡✿➤ *INFO BOT*
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Maria BOT
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Nao Shion BOT
   ♡ۣۜۜ፝͜͜͡͡✿➤ Version: 1.0
   ♡ۣۜۜ፝͜͜͡͡✿➤ Type: VPS
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: 𝑨𝒚𝒖𝒔𝒉-𝒑𝒂𝒏𝒅𝒆𝒚
-  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/919931122319
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: Karu Shion�
+  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/60177637943
   ♡ۣۜۜ፝͜͜͡͡✿➤ Prefix: 「  ${prefix}  」
  ♡ۣۜۜ፝͜͜͡͡✿➤ Total cmd: 51
  ♡ۣۜۜ፝͜͜͡͡✿➤Menu Type: 𝑯𝒆𝒍𝒑-𝑴𝒆𝒏𝒖
@@ -23,7 +23,7 @@ const helpmenu=`
 ⌬${prefix}list
 ⌬${prefix}hi
 ⌬${prefix}support
-⌬${prefix}Maria
+⌬${prefix}Nao
 ⌬${prefix}rules
 ⌬${prefix}info
 🍁 *Owner Commands* 🍁
@@ -79,9 +79,9 @@ const helpmenu=`
 
 🌹𝒎𝒐𝒓𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒄𝒐𝒎𝒊𝒏𝒈 𝒔𝒐𝒐𝒏
 
-『 Maria-Md 』
-   Based on: Miku, 
-   created by : Ayush pandey
-   ©️ Ayush botz inc 
+『 Nao-Shion-Md 』
+   Based on: Maria-Md, 
+   created by : Karu Shion
+   ©️ Karu Shion
 `
 module.exports = helpmenu
