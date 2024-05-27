@@ -1702,9 +1702,7 @@ reply('Success in turning off all autoblock in this group')
             case 'Hi':
 
 
-                let txxt = `*U^I^U ♡* Konichiwa ${pushname} Senpai, I'm Nao Shion Created by
-
- *_Karu Shion_*.`
+                let txxt = `*U^I^U ♡* Konichiwa ${pushname} Senpai, I'm Nao Shion Created by *_Karu Shion_*.`
 
                 Maria.sendMessage(m.chat, {
                     image: {
@@ -2625,13 +2623,14 @@ Cieeee, What's Going On❤️💖👀`,
 
 
             case 'pinterest':
+            case 'pin':
             case 'img': {
                 if (!args.join(" ")) return reply(`🧩${pushname}Please provide a search term!`);
                 reply(mess.waiting)
                 let {
                     pinterest
                 } = require('./Gallery/lib/scraper');
-                let anutrest = await pinterest(text);
+                let anutrest = await pinterest(text+" dressed");
                 let results = [];
 
                 // Get multiple random images (let's say 5 images)
@@ -2653,8 +2652,9 @@ Cieeee, What's Going On❤️💖👀`,
             }
             break;
 
-            case 'runtime': {
-                let lowq = `*The Bot Has Been Online For:*\n🎉 *${runtime(process.uptime())}*`
+            case 'runtime':
+	    case 'check':{
+                let lowq = `*Nao Has Stay Awake For:*\n🎉 *${runtime(process.uptime())}*`
                 reply(lowq)
             }
             break;
