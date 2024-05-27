@@ -18,23 +18,26 @@ const helpmenu=`
 	🍁 *Coding* 🍁
 ⌬${prefix}gitclone
 ⌬${prefix}gdrive
+
 🍁 *General Commands* 🍁
 ⌬${prefix}menu
 ⌬${prefix}list
 ⌬${prefix}hi
 ⌬${prefix}support
-⌬${prefix}Nao
 ⌬${prefix}rules
 ⌬${prefix}info
+
 🍁 *Owner Commands* 🍁
 ⌬${prefix}join
 ⌬${prefix}bctext
 ⌬${prefix}creategc
 ⌬${prefix}leavegc
+
 🍁 *Search Commands* 🍁
 ⌬${prefix}weather
 ⌬${prefix}coffee
 ⌬${prefix}google
+
 🍁 *Group Commands* 🍁
 ⌬${prefix}antilink
 ⌬${prefix}kick
@@ -49,6 +52,7 @@ const helpmenu=`
 ⌬${prefix}demote
 ⌬${prefix}setname
 ⌬${prefix}setgcpp
+
 🍁 *Fun Commands* 🍁
 ⌬${prefix}handsomecheck
 ⌬${prefix}beautifulcheck
@@ -59,12 +63,14 @@ const helpmenu=`
 ⌬${prefix}fact
 ⌬${prefix}couple
 ⌬${prefix}diffine
+
 🍁 *Weeb Commands* 🍁
 ⌬${prefix}crossplay
 ⌬${prefix}neko
 ⌬${prefix}loli
 ⌬${prefix}wallpaper
 ⌬${prefix}waifu
+
 🍁 *Other Commands* 🍁
 ⌬${prefix}iguser
 ⌬${prefix}sticker
